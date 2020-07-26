@@ -1,0 +1,30 @@
+def main():
+    if check():
+        count = 0
+        x = s
+        while count < n:
+            denominator = list(range(2,x))
+            prime = 0
+            for i in denominator:
+                if x % i == 0:
+                    prime += 1
+            if prime == 0:
+                print(x)
+                x += 1
+                count += 1
+            else: 
+                x += 1
+                prime = 0
+
+def check():
+    global s, n
+    s = int(input("Enter an interger: "))
+    if s > 0:
+        n = int(input("How many prime number?"))
+        if n < 0:
+            print("Input must be +ve! Enter again.")
+        else: return True
+    else: 
+        print("Input must be +ve! Enter again")
+        
+main()
